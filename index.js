@@ -5,8 +5,11 @@ const MUY_GRAVE = 'muy_grave';
 let faults, fault;
 let answersGood = 0;
 let answersBad = 0;
+let evaluating = false;
 
 const checkAnswer = (answer) => {
+    if (evaluating) return;
+    evaluating = true;
     if (answer === fault.level) {
         answersGood++;
         document.getElementById(answer).classList.add('good');
@@ -29,6 +32,7 @@ const updateFault = () => {
 
     document.getElementById('next').classList.add('hidden');
     Array.from(document.getElementById('choices').children).forEach(node => node.classList.remove('good', 'bad'));
+    evaluating = false;
 };
 
 function init() {
