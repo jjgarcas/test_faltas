@@ -2,7 +2,8 @@ body {
     font-family: arial;
     background-color: #95b2de;
     padding: 2vw;
-    font-size: 2vw;
+    font-size: 3vw;
+    color: white;
 }
 
 #start {
@@ -47,8 +48,9 @@ body {
 #fault {
     padding: 1vw;
     border: 2px solid #2a3c57;
-    height: 15vw;
+    height: 25vw;
     margin: 2vw 0;
+    color: black;
 }
 
 #choices {
@@ -62,10 +64,67 @@ body {
     cursor: pointer;
 }
 
-#next {
+#choices > div.good {
+    background-color: #a0faa4;
+}
+
+#choices > div.bad {
+    background-color: #faa0a0;
+}
+
+#next,
+#reveal,
+#restart {
     margin-top: 1vw;
     padding: 1vw;
     background-color: #2a3c57;
     cursor: pointer;
     text-align: center;
 }
+
+#wrongAnswersPage {
+    position: absolute;
+    padding: 2vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #95b2de;
+}
+
+.wrongAnswer {
+    border: 2px solid #2a3c57;
+    padding: 2vw;
+    margin-bottom: 2vw;
+    color: black;
+}
+
+.wrongAnswer.leve {
+    background-color: #a0faa4;
+}
+
+.wrongAnswer.grave {
+    background-color: #e89517;
+}
+
+.wrongAnswer.muy_grave {
+    background-color: #faa0a0;
+}
+
+@media (orientation: portrait) {
+    body {
+        padding: 2vh;
+        font-size: 3vh;
+    }
+
+    #startButton {
+        font-size: 6vh;
+        padding: 2vh;
+    }
+
+    #fault {
+        padding: 1vh;
+        height: 55vh;
+        margin: 2vh 0;
+    }
+  }
