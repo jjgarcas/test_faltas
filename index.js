@@ -2,6 +2,8 @@ const LEVE = 'leve';
 const GRAVE = 'grave';
 const MUY_GRAVE = 'muy_grave';
 
+// Comment
+
 function init() {
     let faults, fault;
     let answersGood = 0;
