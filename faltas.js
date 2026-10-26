@@ -1,3 +1,4 @@
+// v0.1
 const faltas = {
     muy_graves: [
         "La transgresión de la buena fe contractual, así como el abuso de confianza en el desempeño del trabajo.",
